@@ -16,13 +16,25 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures {
+        buildConfig = true
+    }
+
     buildTypes {
+
+        getByName("debug") {
+            // establishing communication with emulator and local server
+            buildConfigField("String", "BASE_URL", "\"http://10.0.2.2:3301/\"")
+        }
+
         release {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+
+            buildConfigField("String", "BASE_URL", "\"\"")
         }
     }
     compileOptions {
@@ -47,4 +59,6 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     // Glide for loading images
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    // Http logging interceptor
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
 }
