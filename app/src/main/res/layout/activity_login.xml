@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F8"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="28dp"
+        android:paddingTop="56dp"
+        android:paddingBottom="40dp"
+        android:gravity="center_horizontal">
+
+        <!-- Pharmacy Cross Logo -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginBottom="24dp"
+            app:cardBackgroundColor="#0E9B7F"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="12dp"
+            app:cardMaxElevation="16dp">
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_pharmacy_cross_rx"
+                android:contentDescription="@string/logo_description" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_login"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#1A1F2E"
+            android:letterSpacing="-0.02"
+            android:fontFamily="serif"
+            android:layout_marginBottom="6dp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subtitle_login"
+            android:textSize="13sp"
+            android:textColor="#6B7280"
+            android:gravity="center"
+            android:letterSpacing="0.01"
+            android:lineSpacingMultiplier="1.5"
+            android:layout_marginBottom="36dp" />
+
+        <!-- Email Field Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="14dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="2dp"
+            app:cardMaxElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_email_outline"
+                    app:tint="#9CA3AF"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="@null" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/label_email"
+                    android:textColorHint="#9CA3AF"
+                    android:textColor="#1A1F2E"
+                    android:textSize="14sp"
+                    android:inputType="textEmailAddress"
+                    android:background="@null"
+                    android:paddingStart="0dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Password Field Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="2dp"
+            app:cardMaxElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_lock_outline"
+                    app:tint="#9CA3AF"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="@null" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/passwordInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:boxBackgroundColor="@android:color/transparent"
+                    app:boxBackgroundMode="none"
+                    app:hintEnabled="false"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="#C4C9D4">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/passwordEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/label_password"
+                        android:textColorHint="#9CA3AF"
+                        android:textColor="#1A1F2E"
+                        android:textSize="14sp"
+                        android:inputType="textPassword"
+                        android:background="@null"
+                        android:paddingStart="0dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Forgot Password -->
+        <TextView
+            android:id="@+id/forgotPasswordText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_password"
+            android:textSize="12sp"
+            android:textColor="#0E9B7F"
+            android:textStyle="bold"
+            android:gravity="end"
+            android:layout_marginBottom="26dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Login Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="@string/btn_login"
+            android:textSize="15sp"
+            android:textColor="#FFFFFF"
+            android:letterSpacing="0.12"
+            android:textStyle="bold"
+            android:background="@drawable/bg_login_button"
+            app:backgroundTint="#0E9B7F"
+            app:cornerRadius="14dp"
+            app:elevation="8dp"
+            android:layout_marginBottom="28dp" />
+        <ProgressBar
+            android:id="@+id/loginProgress"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="28dp"
+            android:visibility="gone"
+            android:indeterminateTint="#0E9B7F" />
+
+        <!-- Divider -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_weight="1"
+                android:background="#DDE1E8" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="or"
+                android:textSize="11sp"
+                android:textColor="#B0B6C3"
+                android:paddingHorizontal="12dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_weight="1"
+                android:background="#DDE1E8" />
+        </LinearLayout>
+
+        <!-- Sign Up Link -->
+        <TextView
+            android:id="@+id/signUpText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="#6B7280"
+            android:clickable="true"
+            android:focusable="true">
+
+            <!-- Use SpannableString in code to color "Sign Up" in #3B82F6 -->
+        </TextView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
