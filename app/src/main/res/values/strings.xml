@@ -9,4 +9,14 @@
     <string name="btn_login">Login</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="logo_description">RevenantRx Logo a White cross in teal background</string>
+
+    // Signup Ui
+    <string name="title_signup">Create Account</string>
+    <string name="subtitle_signup">Join Revenant Rx to manage your Prescription Orders</string>
+    <string name="label_full_name">Full Name</string>
+    <string name="label_email_signup">Email Address</string>
+    <string name="label_password_signup">Password</string>
+    <string name="label_phone_signup">Phone Number</string>
+    <string name="label_role">Select Role</string>
+    <string name="btn_signup">Sign Up</string>
 </resources>

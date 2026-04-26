@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F8"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="28dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="40dp"
+        android:gravity="center_horizontal">
+
+        <!-- Pharmacy Cross Logo (smaller than login, compact feel) -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="18dp"
+            app:cardBackgroundColor="#0E9B7F"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="14dp">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_pharmacy_cross_rx"
+                android:contentDescription="@string/logo_description" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_signup"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#1A1F2E"
+            android:letterSpacing="-0.02"
+            android:fontFamily="serif"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subtitle_signup"
+            android:textSize="12sp"
+            android:textColor="#6B7280"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.5"
+            android:layout_marginBottom="28dp" />
+
+        <!-- Full Name Field -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="2dp"
+            app:cardMaxElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_person_outline"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="@null"
+                    app:tint="#9CA3AF" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/regNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/label_full_name"
+                    android:textColorHint="#9CA3AF"
+                    android:textColor="#1A1F2E"
+                    android:textSize="13sp"
+                    android:inputType="textPersonName"
+                    android:background="@null"
+                    android:paddingStart="0dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Email Field -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="2dp"
+            app:cardMaxElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_email_outline"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="@null"
+                    app:tint="#9CA3AF" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/regEmailEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/label_email_signup"
+                    android:textColorHint="#9CA3AF"
+                    android:textColor="#1A1F2E"
+                    android:textSize="13sp"
+                    android:inputType="textEmailAddress"
+                    android:background="@null"
+                    android:paddingStart="0dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Phone Field -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="2dp"
+            app:cardMaxElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_phone_outline"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="@null"
+                    app:tint="#9CA3AF" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/regPhoneEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/label_phone_signup"
+                    android:textColorHint="#9CA3AF"
+                    android:textColor="#1A1F2E"
+                    android:textSize="13sp"
+                    android:inputType="phone"
+                    android:background="@null"
+                    android:paddingStart="0dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Password Field -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="2dp"
+            app:cardMaxElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_lock_outline"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="@null"
+                    app:tint="#9CA3AF" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/passwordInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:boxBackgroundColor="@android:color/transparent"
+                    app:boxBackgroundMode="none"
+                    app:hintEnabled="false"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="#C4C9D4">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/regPasswordEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/label_password_signup"
+                        android:textColorHint="#9CA3AF"
+                        android:textColor="#1A1F2E"
+                        android:textSize="13sp"
+                        android:inputType="textPassword"
+                        android:background="@null"
+                        android:paddingStart="0dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Role Dropdown -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="24dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="2dp"
+            app:cardMaxElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_badge_outline"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="@null"
+                    app:tint="#9CA3AF" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:boxBackgroundColor="@android:color/transparent"
+                    app:boxBackgroundMode="none"
+                    app:hintEnabled="false">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/roleDropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/label_role"
+                        android:textColorHint="#9CA3AF"
+                        android:textColor="#1A1F2E"
+                        android:textSize="13sp"
+                        android:inputType="none"
+                        android:background="@null"
+                        android:paddingStart="0dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_chevron_down"
+                    android:contentDescription="@null"
+                    app:tint="#C4C9D4" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Sign Up Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/registerButton"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="@string/btn_signup"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:letterSpacing="0.12"
+            android:textStyle="bold"
+            android:background="@drawable/bg_signup_button"
+            app:backgroundTint="@null"
+            app:cornerRadius="14dp"
+            app:elevation="8dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Divider -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_weight="1"
+                android:background="#DDE1E8" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="or"
+                android:textSize="11sp"
+                android:textColor="#B0B6C3"
+                android:paddingHorizontal="12dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_weight="1"
+                android:background="#DDE1E8" />
+        </LinearLayout>
+
+        <!-- Login Link -->
+        <TextView
+            android:id="@+id/loginLinkText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#6B7280"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
