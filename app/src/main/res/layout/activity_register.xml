@@ -4,281 +4,293 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4F6F8"
+    android:background="@color/bg_screen"
     android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingHorizontal="28dp"
-        android:paddingTop="48dp"
-        android:paddingBottom="40dp"
+        android:paddingHorizontal="@dimen/screen_padding_horizontal"
+        android:paddingTop="@dimen/screen_padding_top"
+        android:paddingBottom="@dimen/screen_padding_bottom"
         android:gravity="center_horizontal">
 
-        <!-- Pharmacy Cross Logo (smaller than login, compact feel) -->
+        <!-- Logo -->
         <androidx.cardview.widget.CardView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginBottom="18dp"
-            app:cardBackgroundColor="#0E9B7F"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="10dp"
-            app:cardMaxElevation="14dp">
+            android:layout_width="@dimen/logo_size"
+            android:layout_height="@dimen/logo_size"
+            android:layout_marginBottom="@dimen/logo_margin_bottom"
+            app:cardBackgroundColor="@color/teal_primary"
+            app:cardCornerRadius="@dimen/logo_corner_radius"
+            app:cardElevation="@dimen/logo_elevation"
+            app:cardMaxElevation="@dimen/logo_elevation_max">
 
             <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
+                android:layout_width="@dimen/logo_icon_size"
+                android:layout_height="@dimen/logo_icon_size"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_pharmacy_cross_rx"
-                android:contentDescription="@string/logo_description" />
+                android:contentDescription="@string/content_desc_logo" />
         </androidx.cardview.widget.CardView>
 
         <!-- Title -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/title_signup"
-            android:textSize="26sp"
+            android:text="@string/title_register"
+            android:textSize="@dimen/title_text_size"
             android:textStyle="bold"
-            android:textColor="#1A1F2E"
+            android:textColor="@color/text_primary"
             android:letterSpacing="-0.02"
             android:fontFamily="serif"
-            android:layout_marginBottom="4dp" />
+            android:layout_marginBottom="@dimen/title_margin_bottom" />
 
         <!-- Subtitle -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/subtitle_signup"
-            android:textSize="12sp"
-            android:textColor="#6B7280"
+            android:text="@string/subtitle_register"
+            android:textSize="@dimen/subtitle_text_size"
+            android:textColor="@color/text_secondary"
             android:gravity="center"
             android:lineSpacingMultiplier="1.5"
-            android:layout_marginBottom="28dp" />
+            android:layout_marginBottom="@dimen/subtitle_margin_bottom" />
 
         <!-- Full Name Field -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginBottom="12dp"
-            app:cardBackgroundColor="#FFFFFF"
-            app:cardCornerRadius="14dp"
-            app:cardElevation="2dp"
-            app:cardMaxElevation="4dp">
+            android:layout_height="@dimen/field_height"
+            android:layout_marginBottom="@dimen/field_spacing"
+            app:cardBackgroundColor="@color/field_bg"
+            app:cardCornerRadius="@dimen/field_corner_radius"
+            app:cardElevation="@dimen/field_elevation"
+            app:cardMaxElevation="@dimen/field_elevation_max">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:paddingHorizontal="16dp">
+                android:paddingHorizontal="@dimen/field_padding_horizontal">
 
                 <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
+                    android:layout_width="@dimen/field_icon_size"
+                    android:layout_height="@dimen/field_icon_size"
                     android:src="@drawable/ic_person_outline"
-                    android:layout_marginEnd="12dp"
+                    android:layout_marginEnd="@dimen/field_icon_margin"
                     android:contentDescription="@null"
-                    app:tint="#9CA3AF" />
+                    app:tint="@color/icon_tint" />
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
                     android:id="@+id/regNameEditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="@string/label_full_name"
-                    android:textColorHint="#9CA3AF"
-                    android:textColor="#1A1F2E"
-                    android:textSize="13sp"
+                    android:hint="@string/hint_full_name"
+                    android:textColorHint="@color/hint_color"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/field_text_size"
                     android:inputType="textPersonName"
                     android:background="@null"
-                    android:paddingStart="0dp" />
+                    android:paddingStart="0dp"
+                    android:importantForAutofill="yes"
+                    android:autofillHints="name" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <!-- Email Field -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginBottom="12dp"
-            app:cardBackgroundColor="#FFFFFF"
-            app:cardCornerRadius="14dp"
-            app:cardElevation="2dp"
-            app:cardMaxElevation="4dp">
+            android:layout_height="@dimen/field_height"
+            android:layout_marginBottom="@dimen/field_spacing"
+            app:cardBackgroundColor="@color/field_bg"
+            app:cardCornerRadius="@dimen/field_corner_radius"
+            app:cardElevation="@dimen/field_elevation"
+            app:cardMaxElevation="@dimen/field_elevation_max">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:paddingHorizontal="16dp">
+                android:paddingHorizontal="@dimen/field_padding_horizontal">
 
                 <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
+                    android:layout_width="@dimen/field_icon_size"
+                    android:layout_height="@dimen/field_icon_size"
                     android:src="@drawable/ic_email_outline"
-                    android:layout_marginEnd="12dp"
+                    android:layout_marginEnd="@dimen/field_icon_margin"
                     android:contentDescription="@null"
-                    app:tint="#9CA3AF" />
+                    app:tint="@color/icon_tint" />
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
                     android:id="@+id/regEmailEditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="@string/label_email_signup"
-                    android:textColorHint="#9CA3AF"
-                    android:textColor="#1A1F2E"
-                    android:textSize="13sp"
+                    android:hint="@string/hint_email"
+                    android:textColorHint="@color/hint_color"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/field_text_size"
                     android:inputType="textEmailAddress"
                     android:background="@null"
-                    android:paddingStart="0dp" />
+                    android:paddingStart="0dp"
+                    android:importantForAutofill="yes"
+                    android:autofillHints="emailAddress" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <!-- Phone Field -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginBottom="12dp"
-            app:cardBackgroundColor="#FFFFFF"
-            app:cardCornerRadius="14dp"
-            app:cardElevation="2dp"
-            app:cardMaxElevation="4dp">
+            android:layout_height="@dimen/field_height"
+            android:layout_marginBottom="@dimen/field_spacing"
+            app:cardBackgroundColor="@color/field_bg"
+            app:cardCornerRadius="@dimen/field_corner_radius"
+            app:cardElevation="@dimen/field_elevation"
+            app:cardMaxElevation="@dimen/field_elevation_max">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:paddingHorizontal="16dp">
+                android:paddingHorizontal="@dimen/field_padding_horizontal">
 
                 <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
+                    android:layout_width="@dimen/field_icon_size"
+                    android:layout_height="@dimen/field_icon_size"
                     android:src="@drawable/ic_phone_outline"
-                    android:layout_marginEnd="12dp"
+                    android:layout_marginEnd="@dimen/field_icon_margin"
                     android:contentDescription="@null"
-                    app:tint="#9CA3AF" />
+                    app:tint="@color/icon_tint" />
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
                     android:id="@+id/regPhoneEditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="@string/label_phone_signup"
-                    android:textColorHint="#9CA3AF"
-                    android:textColor="#1A1F2E"
-                    android:textSize="13sp"
+                    android:hint="@string/hint_phone"
+                    android:textColorHint="@color/hint_color"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/field_text_size"
                     android:inputType="phone"
                     android:background="@null"
-                    android:paddingStart="0dp" />
+                    android:paddingStart="0dp"
+                    android:importantForAutofill="yes"
+                    android:autofillHints="phone" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <!-- Password Field -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginBottom="12dp"
-            app:cardBackgroundColor="#FFFFFF"
-            app:cardCornerRadius="14dp"
-            app:cardElevation="2dp"
-            app:cardMaxElevation="4dp">
+            android:layout_height="@dimen/field_height"
+            android:layout_marginBottom="@dimen/field_spacing"
+            app:cardBackgroundColor="@color/field_bg"
+            app:cardCornerRadius="@dimen/field_corner_radius"
+            app:cardElevation="@dimen/field_elevation"
+            app:cardMaxElevation="@dimen/field_elevation_max">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:paddingHorizontal="16dp">
+                android:paddingHorizontal="@dimen/field_padding_horizontal">
 
                 <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
+                    android:layout_width="@dimen/field_icon_size"
+                    android:layout_height="@dimen/field_icon_size"
                     android:src="@drawable/ic_lock_outline"
-                    android:layout_marginEnd="12dp"
+                    android:layout_marginEnd="@dimen/field_icon_margin"
                     android:contentDescription="@null"
-                    app:tint="#9CA3AF" />
+                    app:tint="@color/icon_tint" />
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/passwordInputLayout"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                <EditText
+                    android:id="@+id/regPasswordEditText"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    app:boxBackgroundColor="@android:color/transparent"
-                    app:boxBackgroundMode="none"
-                    app:hintEnabled="false"
-                    app:passwordToggleEnabled="true"
-                    app:passwordToggleTint="#C4C9D4">
+                    android:hint="@string/hint_password"
+                    android:textColorHint="@color/hint_color"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/field_text_size"
+                    android:inputType="textPassword"
+                    android:background="@null"
+                    android:paddingStart="0dp"
+                    android:importantForAutofill="yes"
+                    android:autofillHints="newPassword" />
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/regPasswordEditText"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="@string/label_password_signup"
-                        android:textColorHint="#9CA3AF"
-                        android:textColor="#1A1F2E"
-                        android:textSize="13sp"
-                        android:inputType="textPassword"
-                        android:background="@null"
-                        android:paddingStart="0dp" />
-                </com.google.android.material.textfield.TextInputLayout>
+                <ImageView
+                    android:id="@+id/togglePasswordVisibility"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_visibility_off"
+                    android:padding="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="@string/content_desc_toggle_password"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:tint="@color/icon_tint_toggle" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <!-- Role Dropdown -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginBottom="24dp"
-            app:cardBackgroundColor="#FFFFFF"
-            app:cardCornerRadius="14dp"
-            app:cardElevation="2dp"
-            app:cardMaxElevation="4dp">
+            android:layout_height="@dimen/field_height"
+            android:layout_marginBottom="@dimen/field_spacing_last"
+            app:cardBackgroundColor="@color/field_bg"
+            app:cardCornerRadius="@dimen/field_corner_radius"
+            app:cardElevation="@dimen/field_elevation"
+            app:cardMaxElevation="@dimen/field_elevation_max">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:paddingHorizontal="16dp">
+                android:paddingHorizontal="@dimen/field_padding_horizontal">
 
                 <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
+                    android:layout_width="@dimen/field_icon_size"
+                    android:layout_height="@dimen/field_icon_size"
                     android:src="@drawable/ic_badge_outline"
-                    android:layout_marginEnd="12dp"
+                    android:layout_marginEnd="@dimen/field_icon_margin"
                     android:contentDescription="@null"
-                    app:tint="#9CA3AF" />
+                    app:tint="@color/icon_tint" />
 
                 <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    app:boxStrokeColor="@android:color/transparent"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
                     app:boxBackgroundColor="@android:color/transparent"
-                    app:boxBackgroundMode="none"
                     app:hintEnabled="false">
 
                     <AutoCompleteTextView
                         android:id="@+id/roleDropdown"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="@string/label_role"
-                        android:textColorHint="#9CA3AF"
-                        android:textColor="#1A1F2E"
-                        android:textSize="13sp"
+                        android:hint="@string/hint_select_role"
+                        android:textColorHint="@color/hint_color"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/field_text_size"
                         android:inputType="none"
                         android:background="@null"
                         android:paddingStart="0dp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
-                    android:src="@drawable/ic_chevron_down"
-                    android:contentDescription="@null"
-                    app:tint="#C4C9D4" />
+                    android:layout_width="@dimen/field_icon_size"
+                    android:layout_height="@dimen/field_icon_size"
+                    android:src="@drawable/ic_badge_outline"
+                    android:layout_marginEnd="@dimen/field_icon_margin"
+                    android:contentDescription="@string/content_desc_role_dropdown"
+                    android:labelFor="@id/roleDropdown"
+                    app:tint="@color/icon_tint" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -286,17 +298,16 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/registerButton"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:text="@string/btn_signup"
-            android:textSize="14sp"
-            android:textColor="#FFFFFF"
+            android:layout_height="@dimen/button_height"
+            android:text="@string/btn_sign_up"
+            android:textSize="@dimen/button_text_size"
+            android:textColor="@color/white"
             android:letterSpacing="0.12"
             android:textStyle="bold"
-            android:background="@drawable/bg_signup_button"
+            android:background="@drawable/bg_button_teal"
             app:backgroundTint="@null"
-            app:cornerRadius="14dp"
-            app:elevation="8dp"
-            android:layout_marginBottom="24dp" />
+            app:cornerRadius="@dimen/button_corner_radius"
+            android:layout_marginBottom="@dimen/button_margin_bottom" />
 
         <!-- Divider -->
         <LinearLayout
@@ -304,27 +315,27 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="@dimen/divider_margin_bottom">
 
             <View
                 android:layout_width="0dp"
-                android:layout_height="0.5dp"
+                android:layout_height="@dimen/divider_height"
                 android:layout_weight="1"
-                android:background="#DDE1E8" />
+                android:background="@color/divider_color" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="or"
-                android:textSize="11sp"
-                android:textColor="#B0B6C3"
-                android:paddingHorizontal="12dp" />
+                android:text="@string/divider_or"
+                android:textSize="@dimen/divider_text_size"
+                android:textColor="@color/text_muted"
+                android:paddingHorizontal="@dimen/divider_text_padding" />
 
             <View
                 android:layout_width="0dp"
-                android:layout_height="0.5dp"
+                android:layout_height="@dimen/divider_height"
                 android:layout_weight="1"
-                android:background="#DDE1E8" />
+                android:background="@color/divider_color" />
         </LinearLayout>
 
         <!-- Login Link -->
@@ -332,8 +343,8 @@
             android:id="@+id/loginLinkText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:textColor="#6B7280"
+            android:textSize="@dimen/link_text_size"
+            android:textColor="@color/text_secondary"
             android:clickable="true"
             android:focusable="true" />
 

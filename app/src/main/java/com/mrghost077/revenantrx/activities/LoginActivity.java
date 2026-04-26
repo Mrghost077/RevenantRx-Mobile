@@ -156,12 +156,13 @@ public class LoginActivity extends AppCompatActivity {
         spannableString.setSpan(new ClickableSpan() {
             @Override
             public void onClick(@NonNull View widget) {
-                // Toast.makeText(LoginActivity.this, "Navigate to Register", Toast.LENGTH_SHORT).show();
-                // Add Intent to RegisterActivity here later
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
             }
         }, startIndex, endIndex, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         signUpText.setText(spannableString);
-        signUpText.setMovementMethod(LinkMovementMethod.getInstance()); // Required for clicks
+        signUpText.setMovementMethod(LinkMovementMethod.getInstance());
+        signUpText.setHighlightColor(android.graphics.Color.TRANSPARENT);
     }
 }

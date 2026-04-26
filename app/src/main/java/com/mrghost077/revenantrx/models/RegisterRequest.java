@@ -15,12 +15,12 @@ public class RegisterRequest {
     private String password;
 
     @SerializedName("phoneNum")
-    private int phoneNum;
+    private String phoneNum;
 
     @SerializedName("role")
     private String role;
 
-    public RegisterRequest(String name, String email, String password, int phoneNum, String role) {
+    public RegisterRequest(String name, String email, String password, String phoneNum, String role) {
         this.name = name;
         this.email = email;
         this.password = password;
